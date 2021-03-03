@@ -26,7 +26,7 @@ class HttpClient(object):
         else:
             request_kwargs['params'] = data
         requests.packages.urllib3.disable_warnings()
-        response = requests.request(**request_kwargs, auth=HTTPBasicAuth('m.ganin@isoit.ru', 'Ganina'))
+        response = requests.request(**request_kwargs, auth=HTTPBasicAuth('Login', 'Password'))
         self.write_log(**request_kwargs)
 
         if not str(response.status_code).startswith('2'):
